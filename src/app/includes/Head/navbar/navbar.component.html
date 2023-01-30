@@ -1,0 +1,18 @@
+<div class="navbar">
+    <div class="navbar-logo">
+      <mat-icon class="logo-icon">library_books</mat-icon>
+      <span>Study with us</span>
+    </div>
+    <mat-icon (click)="toggleMenu()" class="navbar-menu">{{isMenuOpen ? "close" : "menu"}}</mat-icon>
+    <ul class="menu-items" [class.is-open]="isMenuOpen">
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#courses">Mentorship</a></li>
+        <li><a href="#courses">Events</a></li>
+        <li><a href="#courses">Join</a></li>
+        <li><a href="#courses">Partner</a></li>
+        <li><a href="#courses" class="btn-navbar-link btn-text">Blog<mat-icon class="blog-arrow">arrow_right_alt</mat-icon></a></li>
+    </ul>
+    
+      
+ 
+</div>

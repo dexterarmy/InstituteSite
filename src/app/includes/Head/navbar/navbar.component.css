@@ -1,0 +1,141 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
+    padding: 0 6rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--black);
+    z-index: 1500;
+}
+
+.navbar .navbar-logo{
+    display: flex;
+    display: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;;
+    font-weight: 600;
+}
+
+
+.navbar .logo-icon{
+    font-size: 4.5rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    transition: all 0.3s;
+}
+
+.menu-items{
+    display: flex;
+    align-items: center;
+    
+}
+
+.menu-items a{
+    margin-left: 4rem;
+    
+}
+
+.menu-items a:link, .menu-items a:visited{
+    font-size: 1.8rem;
+  font-weight: 400;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s;
+}
+
+.menu-items .btn-navbar-link:link, .menu-items .btn-navbar-link:link:visited{
+    padding: 0.8rem 2.5rem;
+  border-radius: 3rem;
+  background-color: var(--orange);
+ 
+}
+
+.menu-items .btn-navbar-link:hover, .menu-items .btn-navbar-link:active{
+    background-color: var(--orange);
+}
+
+.navbar .blog-arrow{
+    padding-top: 0.75rem;;
+}
+
+.navbar-menu{
+    display: none;
+}
+
+@media (max-width:1024px) {
+    @keyframes moveInRight {
+        0% {
+          opacity: 0;
+          transform: translateX(100px);
+        }
+      
+      
+        100% {
+          opacity: 1;
+          transform: translate(0);
+        }
+      }
+    
+    .menu-items{
+        display: none;
+    }
+    
+    .navbar{
+        padding: 2rem;
+    }
+    .navbar-menu{
+        display: block;
+        font-size: 4rem;
+        height: 4rem;
+        width: 4rem;
+        z-index: 2000;
+        
+    }
+
+    .menu-items.is-open{
+        /* overflow:hidden; */
+        display: block;
+        position: absolute;
+        /* top: 9rem; */
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 200px;
+        padding-top: 9rem;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        background-color: var(--miniBlack);
+        z-index: 1000;
+        transition: all 5s ease-out;
+        animation: moveInRight 0.5s ease-in;
+     }
+     .menu-items.is-open li{
+         margin: 40px 5px 40px 0;
+     }
+     .menu-items.is-open li a {
+       width: 70%;  
+       font-size: 2rem;
+       /* after putting icons before them */
+       /* text-align: center; */
+       margin-left: 60px;
+     }
+ 
+     .menu-items.is-open li .btn-navbar-link{
+         margin-left: 30px;
+     }
+    
+    .navbar .logo-icon{
+        font-size: 3.5rem;
+        width: 3.5rem;
+        height: 3.5rem;
+       
+    }
+
+
+    }
+
+    

@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    box-sizing: border-box;
+    margin: 0;
+  padding: 0;
+}
+
+:root{
+    --black : #000;
+    --miniBlack: rgb(10, 10, 10);
+    --orange: rgb(185, 90, 26);
+    --purpleDark: rgb(16, 12, 70);
+    --white : #fff;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Poppins", "Helvetica Neue", sans-serif;
+    font-weight: 300;
+    line-height: 1.9;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: var(--black);
+    color: var(--white);
+
+}
+
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+ul{
+    list-style-type: none;
+}
+/* html, body { height: 100%; } */
+/* body { margin: 0;  } */
